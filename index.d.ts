@@ -634,6 +634,7 @@ declare module 'binance-api-node' {
     futuresPrices(options?: { symbol: string }): Promise<{ [index: string]: string }>
     futuresAllBookTickers(): Promise<{ [key: string]: Ticker }>
     futuresMarkPrice(): Promise<MarkPriceResult[]>
+    futuresMarkPrice(options: {symbol: string}): Promise<MarkPriceResult>
     futuresAllForceOrders(options?: {
       symbol?: string
       startTime?: number
